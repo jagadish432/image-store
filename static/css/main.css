@@ -1,0 +1,51 @@
+    .btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.active, .btn:hover {
+  background-color: #666;
+  color: white;
+}
+.navbar-nav > .active > a {
+  color: aqua;
+  background-color: chartreuse;
+}
+
+hr{ clear:both; }
+
+.sub_div {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert-danger {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}

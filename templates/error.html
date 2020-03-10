@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+<div class="container">
+    {% for category,message in get_flashed_messages(with_categories=true) %}
+    <h1><div class="alert alert-{{ category }} text-center" role="alert"> {{ message }}</div></h1>
+    {% endfor %}
+</div>
+<p>Internal server error, please go to homepage by clicking <a href="http://127.0.0.1:5000/">here</a></p>
+</body>
+</html>

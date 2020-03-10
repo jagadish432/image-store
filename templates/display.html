@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Image</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse"> <!--navbar-light static-top-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Welcome to Image store app</a>
+        </div>
+        <div id="myDiv">
+            <ul class="nav navbar-nav">
+                <li class="active nav-item yo">
+                    <a class="nav-ink" href="http://127.0.0.1:5000/">Home</a>
+                </li>
+                <li class="nav-item yo">
+                    <a class="nav-link" href="#about"> About us <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class="container">
+    {% for category,message in get_flashed_messages(with_categories=true) %}
+    <div class="alert alert-{{ category }}" role="alert"> {{ message }}</div>
+    {% endfor %}
+</div>
+
+<img src="data:image/png;base64, {{ content }}" alt="beastie.png" width="400" height="300"/>
+</body>
+</html>
